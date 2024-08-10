@@ -1,0 +1,48 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    height: 100vh;
+    background-image: url('assets/pexels-mediocrememories-1117132.jpg');
+    background-size: cover;
+}
+
+.nav-bar{
+    height: 10%;
+    background-color: grey;
+    display: flex;
+}
+
+.nav-title{
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.nav-list{
+    height: 100%;
+    width: 40%;
+}
+
+.list{
+    height: 100%;
+    list-style: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.links{
+    margin-right: 60px;
+    padding: 10px;
+    border-radius: 12px;
+}
+
+.links:hover{
+    background-color: hsla(0, 4%, 71%, 0.88);
+}
