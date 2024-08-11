@@ -6,43 +6,95 @@
 
 body{
     height: 100vh;
-    background-image: url('assets/pexels-mediocrememories-1117132.jpg');
-    background-size: cover;
+    background-color: #1e1e1e;
 }
 
 .nav-bar{
     height: 10%;
-    background-color: grey;
+    background-color: #090808;
     display: flex;
 }
 
-.nav-title{
-    width: 60%;
-    display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+.poster-container{
+    height: 80%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 140px;
 }
 
-.nav-list{
-    height: 100%;
-    width: 40%;
-}
-
-.list{
-    height: 100%;
-    list-style: none;
+.actor{
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    margin-top: 118px;
+    margin-left: 60px;
+    background-image: url('assets/20160513_074630_leonardo_dicaprio_24734_13519.webp');
+    background-size: cover;
+    background-position: center;
     display: flex;
-    align-items: center;
     justify-content: center;
-    cursor: pointer;
+    align-items: center;
+    
 }
 
-.links{
-    margin-right: 60px;
-    padding: 10px;
-    border-radius: 12px;
+.movie{
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    margin-top: 118px;
+    background-image: url('assets/Dark_knight_rises_poster.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.links:hover{
-    background-color: hsla(0, 4%, 71%, 0.88);
+.category{
+    border-radius: 20px;
+    height: 400px;
+    width: 300px;
+    margin-top: 118px;
+    background-image: url('assets/main-movie-genres-film.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.actor .actor-search,
+.movie .movie-search,
+.category .category-search {
+    display: none;
+    text-align: center;
+}
+
+.actor:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.actor:hover .actor-search{
+    display: inline;
+}
+
+.movie:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.movie:hover .movie-search{
+    display: inline;
+}
+
+.category:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.category:hover .category-search{
+    display: inline;
 }
