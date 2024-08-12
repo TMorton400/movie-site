@@ -99,17 +99,22 @@ body{
 
 
 
-@media (min-width: 769px) and (max-width: 1239px){
+@media (min-width: 952px) and (max-width: 1239px){
     .actor, .movie, .category{
         width: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 951px){
+    .actor, .movie, .category{
+        width: 200px;
     }
 }
 
 /* Tablet View (768px and below) */
 @media screen and (max-width: 768px) {
     .nav-bar {
-        height: 12%;
-        background-color: red;
+        height: 20%;
     }
 
     .poster-container {
