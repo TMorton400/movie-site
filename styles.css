@@ -2,6 +2,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    border: 1px solid yellow;
 }
 
 body{
@@ -17,17 +18,16 @@ body{
 
 .poster-container{
     height: 80%;
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    column-gap: 140px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .actor{
     border-radius: 20px;
     height: 400px;
-    width: 300px;
-    margin-top: 118px;
-    margin-left: 60px;
+    width: 350px;
+    
     background-image: url('assets/20160513_074630_leonardo_dicaprio_24734_13519.webp');
     background-size: cover;
     background-position: center;
@@ -40,8 +40,7 @@ body{
 .movie{
     border-radius: 20px;
     height: 400px;
-    width: 300px;
-    margin-top: 118px;
+    width: 350px;
     background-image: url('assets/Dark_knight_rises_poster.jpg');
     background-size: cover;
     display: flex;
@@ -52,8 +51,7 @@ body{
 .category{
     border-radius: 20px;
     height: 400px;
-    width: 300px;
-    margin-top: 118px;
+    width: 350px;
     background-image: url('assets/main-movie-genres-film.webp');
     background-size: cover;
     background-position: center;
@@ -97,4 +95,65 @@ body{
 
 .category:hover .category-search{
     display: inline;
+}
+
+
+
+@media (min-width: 952px) and (max-width: 1239px){
+    .actor, .movie, .category{
+        width: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 951px){
+    .actor, .movie, .category{
+        width: 200px;
+    }
+}
+
+/* Tablet View (768px and below) */
+@media screen and (max-width: 768px) {
+    .nav-bar {
+        height: 20%;
+    }
+
+    .poster-container {
+        height:auto;
+        flex-direction: column;
+        display: flex;
+        align-items: center;
+        width: auto;
+        justify-content: center;
+        height: 80;
+        column-gap: 20px;
+        row-gap: 20px;
+        padding: 20px;
+    }
+
+    .actor, .movie, .category {
+        height: 300px;
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+}
+
+/* Mobile View (480px and below) */
+@media screen and (max-width: 480px) {
+    .nav-bar {
+        height: 15%;
+        background-color: black;
+    }
+
+    .poster-container {
+        padding-top: 30px
+    }
+
+    .actor, .movie, .category {
+        height: 250px;
+        width: 50%;
+        margin: 20px auto;
+    }
+
+
 }
