@@ -2,7 +2,6 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    border: 1px solid yellow;
 }
 
 body{
@@ -30,16 +29,47 @@ body{
     height: 100%;
     width: 40%;
     color: white;
+
+    display: flex;
+
+}
+
+.list{
+    width: 100%;
+    display: flex;
+    list-style: none;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.links{
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.links:hover{
+    background-color: grey;
+    color: black;
+
+
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
+
+    margin-left: 28px;
+    margin-top: 10px;
+    height: 60px;
+    width: 65px;
+
 }
 
 .nav-logo img {
     width: 80px;
+
     margin-right: 10px;
+
 }
 
 .nav-logo h2 {
