@@ -121,11 +121,12 @@ body{
     align-items: center;
 }
 
-.actor .actor-search,
-.movie .movie-search,
-.category .category-search {
+.actor .actor-button,
+.movie .movie-button,
+.category .category-button {
     display: none;
     text-align: center;
+    padding: 5px;
 }
 
 .actor:hover {
@@ -134,7 +135,7 @@ body{
     background-blend-mode: darken; 
 }
 
-.actor:hover .actor-search{
+.actor:hover .actor-button{
     display: inline;
 }
 
@@ -144,7 +145,7 @@ body{
     background-blend-mode: darken; 
 }
 
-.movie:hover .movie-search{
+.movie:hover .movie-button{
     display: inline;
 }
 
@@ -154,7 +155,7 @@ body{
     background-blend-mode: darken; 
 }
 
-.category:hover .category-search{
+.category:hover .category-button{
     display: inline;
 }
 
