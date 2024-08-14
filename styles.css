@@ -29,6 +29,7 @@ body{
     height: 100%;
     width: 40%;
     color: white;
+
     display: flex;
 
 }
@@ -49,19 +50,26 @@ body{
 .links:hover{
     background-color: grey;
     color: black;
+
+
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
+
     margin-left: 28px;
     margin-top: 10px;
     height: 60px;
     width: 65px;
+
 }
 
 .nav-logo img {
     width: 80px;
+
+    margin-right: 10px;
+
 }
 
 .nav-logo h2 {
