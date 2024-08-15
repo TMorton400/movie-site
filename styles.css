@@ -10,17 +10,20 @@ body{
 }
 
 
-
 .nav-bar{
     height: 10%;
     background-color: rgb(0, 0, 0);
     display: flex;
+    align-items: center;
+    justify-content: space-between;
     color: white;
     font-family: 'Montserrat';
     font-weight: bold;
 }
 
 .nav-title{
+    flex: 1;
+    text-align: center;
     width: 60%;
     display: flex;
     justify-content: space-evenly;
@@ -31,7 +34,6 @@ body{
     height: 100%;
     width: 40%;
     color: white;
-
     display: flex;
 
 }
@@ -52,14 +54,11 @@ body{
 .links:hover{
     background-color: grey;
     color: black;
-
-
 }
 
 .nav-logo {
     display: flex;
     align-items: center;
-
     margin-left: 28px;
     margin-top: 10px;
     height: 60px;
@@ -182,6 +181,29 @@ body{
     }
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.mobileMenu {
+    display: none;
+    position: absolute;
+    top: 60px; 
+    left: 0;
+    width: 100%;
+    padding: 20px 0;
+}
+
+
 /* Tablet View (768px and below) */
 @media screen and (max-width: 768px) {
     .nav-bar {
@@ -214,17 +236,49 @@ body{
     .nav-bar {
         height: 15%;
         background-color: black;
+        flex-direction: row;
+        align-items: center;
+    }
+    .nav-logo {
+        margin: 0;
+    }
+
+    .nav-title {
+        text-align:center;
+        width: 100%;
     }
 
     .poster-container {
-        padding-top: 30px
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
     }
 
     .actor, .movie, .category {
         height: 250px;
         width: 50%;
         margin: 20px auto;
+        align-items: center;
     }
 
+    button {
+        width: 80%;
+        font-size: 14px;
+    }
 
+    .nav-logo img {
+        width: 80px;
+        height: 90px;
+        
+    
+        margin-right: 10px;
+    }
+
+    .hamburger { 
+        display: flex;
+    }
+
+    .nav-list {
+        display: none; 
+    }
 }
