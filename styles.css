@@ -9,6 +9,16 @@ body{
     background-color: #1e1e1e;
 }
 
+.footer {
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 30px ;
+    font-family: 'Montserrat';
+    font-size: 20px;
+    bottom: 0;
+    width: 100%;
+}
 
 .nav-bar{
     height: 10%;
