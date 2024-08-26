@@ -83,7 +83,7 @@ a{
 }
 
 .search-container{
-    height: auto;
+    height: 25%;
     display: flex;
     align-items: center;
     justify-content:center;
@@ -97,7 +97,6 @@ a{
 }
 
 .input-container{
-    border: 1px solid yellow;
     background-color: white;
     border-radius: 8px;
 }
@@ -114,4 +113,23 @@ a{
 
 i{
     margin-right: 20px;
+}
+
+.card-container{
+    height: 60%;
+    display: flex;
+    gap: 88px;
+    align-items: center;
+    justify-content: space-evenly;
+}
+
+.movie-card{
+    height: 227px;
+    width: 166px;
+    border: 1px solid black;
+}
+
+.movie-image{
+    height: 227px;
+    width: 166px;
 }
