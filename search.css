@@ -101,7 +101,8 @@ a{
     border-radius: 8px;
 }
 
-.actor-search{
+.actor-search,
+.movie-search{
     text-align: center;
     height: 40px;
     width: 240px;
@@ -130,6 +131,11 @@ i{
 }
 
 .movie-image{
+    height: 227px;
+    width: 166px;
+}
+
+.actor-image{
     height: 227px;
     width: 166px;
 }
