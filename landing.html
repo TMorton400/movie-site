@@ -8,7 +8,7 @@
     <title>Document</title>
 </head>
 <body>
-    <nav class="nav-bar">
+    <nav class="nav-bar" id="navBar">
         <div class="nav-logo">
 
             <img src="assets/ReelTime.png" id="logo" alt="Logo"/>
@@ -17,41 +17,31 @@
         <div class="nav-title">
             <h2>ReelWorld</h2>
         </div>
+
         <div class="nav-list">
             <ul class="list">
-                <li class="links">Home</li>
+                <a href="landing.html"><li class="links">Home</li></a>
                 <li class="links">Search</li>
                 <li class="links">About</li>
             </ul>
         </div>
 
-        <div class="hamburger">
+        <div class="hamburger" onclick="popMenu()">
             <span></span>
             <span></span>
             <span></span>
         </div>
+        <div class="drop-nav-list" id="navList">
+            <ul class="drop-list" id="list">
+                <a href="landing.html"><li class="drop-links">Home</li></a>
+                <li class="drop-links">Search</li>
+                <li class="drop-links">About</li>
+            </ul>
+        </div>
+
         
     </nav>
     
-
-        <div class="mobileView">
-            <ul class="mobileMenu">
-                <li class="mobileNav">Home</li>
-                <li class="mobileNav">Search</li>
-                <li class="mobileNav">About</li>
-            </ul>
-        </div>
-    </nav>
-
-    <script>
-        const hamburger = document.querySelector('.hamburger');
-        const mobileView = document.querySelector('.mobileView');
-    
-        hamburger.addEventListener('click', () => {
-            mobileView.classList.toggle('open');
-        });
-    </script>
-
 
     <main class="poster-container">
         <div class="actor">
