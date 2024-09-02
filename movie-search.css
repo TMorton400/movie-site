@@ -12,42 +12,29 @@ body{
 a{
     text-decoration: none;
     color: white;
-    cursor: pointer;
-}
-
-.footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 30px ;
-    font-family: 'Montserrat';
-    font-size: 20px;
-    bottom: 0;
-    width: 100%;
 }
 
 .nav-bar{
     height: 10%;
-    width: 100%;
     background-color: rgb(0, 0, 0);
     display: flex;
-    align-items: center;
-    justify-content: space-between;
     color: white;
     font-family: 'Montserrat';
     font-weight: bold;
 }
 
 .nav-title{
-    flex: 1;
-    text-align: center;
     width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
 }
 
 .nav-list{
     height: 100%;
     width: 40%;
     color: white;
+
     display: flex;
 
 }
@@ -60,12 +47,18 @@ a{
     justify-content: space-evenly;
 }
 
-
-
 .links{
     padding: 10px;
     border-radius: 10px;
 }
+
+.links:hover{
+    background-color: grey;
+    color: black;
+
+
+}
+
 
 .drop-nav-list{
     height: 100%;
@@ -90,33 +83,10 @@ a{
     border-radius: 10px;
 }
 
-
-.links:hover{
-    background-color: grey;
-    color: black;
-}
-
-.hamburger {
-    display: none;
-    flex-direction: column;
-    cursor: pointer;
-}
-
-.hamburger span {
-    width: 25px;
-    height: 3px;
-    background-color: #fff;
-    margin: 4px 0;
-}
-
-.hamburger:hover{
-    background-color: grey;
-}
-
-
 .nav-logo {
     display: flex;
     align-items: center;
+
     margin-left: 28px;
     margin-top: 10px;
     height: 60px;
@@ -126,14 +96,14 @@ a{
 
 .nav-logo img {
     width: 80px;
-    margin-bottom: 10px;
+
     margin-right: 10px;
 
 }
 
 .nav-logo h2 {
     margin: 0;
-    font-size: 24px;
+    font-size: 20px;
 }
 
 .search-container{
@@ -184,15 +154,36 @@ i{
     border: 1px solid black;
 }
 
+.movie-image{
+    height: 227px;
+    width: 166px;
+}
+
 .actor-image{
     height: 227px;
     width: 166px;
 }
 
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+}
+
+.hamburger span {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 4px 0;
+}
+
+.hamburger:hover{
+    background-color: grey;
+}
 
 
 @media (min-width: 952px) and (max-width: 1239px){
-    .actor-image{
+    .movie-image{
         height: 220px;
         width: 150px;
     }
@@ -258,7 +249,7 @@ i{
 
     .card-container{
         flex-direction: column;
-        margin-top: 30px;
+        margin-top: 60px;
     }
 }
 
@@ -273,6 +264,10 @@ i{
     }
 
 
+    .nav-title{
+        width: 100%;
+    }
+    
     .nav-title h2{
         height: 80px;
         display: flex;
@@ -283,6 +278,7 @@ i{
 
     .hamburger { 
         display: flex;
+        align-items: center;
         margin-bottom: 15px;
     }
 
