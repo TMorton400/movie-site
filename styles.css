@@ -1,3 +1,8 @@
+:root{
+    --textFamily: 'Montserrat';
+    --fontSize: 20px;
+}
+
 *{
     margin: 0;
     padding: 0;
@@ -20,8 +25,8 @@ a{
     color: white;
     text-align: center;
     padding: 30px ;
-    font-family: 'Montserrat';
-    font-size: 20px;
+    font-family: var(--textFamily);
+    font-size: var(--fontSize);
     bottom: 0;
     width: 100%;
 }
@@ -33,7 +38,7 @@ a{
     align-items: center;
     justify-content: space-between;
     color: white;
-    font-family: 'Montserrat';
+    font-family: var(--textFamily);
     font-weight: bold;
 }
 
@@ -41,6 +46,9 @@ a{
     flex: 1;
     text-align: center;
     width: 60%;
+    font-size: 28px;
+    font-weight: 600;
+    font-family: var(--textFamily);
 }
 
 .nav-list{
@@ -149,21 +157,8 @@ a{
     align-items: center;
 }
 
-.category{
-    border-radius: 20px;
-    height: 400px;
-    width: 350px;
-    background-image: url('assets/main-movie-genres-film.webp');
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
 .actor .actor-button,
-.movie .movie-button,
-.category .category-button {
+.movie .movie-button {
     display: none;
     text-align: center;
     padding: 5px;

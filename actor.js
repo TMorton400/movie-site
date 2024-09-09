@@ -1,7 +1,8 @@
 // Base URL and API options
 const apiKey = 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJlYjY0NGFhMTgwNzcwZjRmN2NlYWIzMjIwZTBjNzk1ZCIsIm5iZiI6MTcyNTM5MTk2OC44NDY5NzgsInN1YiI6IjY2YjIwNWJmZDQ2MDc2OWEzNDNhNTE2ZiIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.z1I9f-H5qRf2MqztJdk5sRNytnlWWphts4wqXW9a9UQ';
 const searchContainer = document.getElementById('card-display');
-const actor = document.getElementById('actorSearch');
+const actor = document.getElementById('actorSearch')
+const cardContainer = document.getElementById('cardContainer');
 
 const actorOptions = {
   method: 'GET',
@@ -32,14 +33,49 @@ const displayActors = (actors) => {
   searchContainer.innerHTML = '';
 
   actors.forEach(actor => {
-    const actorCard = document.createElement('div');
-    const actorImage = document.createElement('img');
 
-    actorImage.src = actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}` : 'https://via.placeholder.com/200';
-    actorImage.classList.add('actor-image');
+    console.log(actor.name);
 
-    actorCard.appendChild(actorImage);
-    searchContainer.appendChild(actorCard);
+    if(!actor.profile_path) return;
+
+    //Create flip card outer div
+    const flipCard = document.createElement('div');
+    flipCard.classList.add('flip-card');
+
+    //Create inner flip card
+    const flipCardInner = document.createElement('div');
+    flipCardInner.classList.add('flip-card-inner');
+
+    const flipCardFront = document.createElement('div');
+    flipCardFront.classList.add('flip-card-front');
+
+    const imageCard = document.createElement('img');
+    imageCard.classList.add('flip-card-image');
+    imageCard.src = actor.profile_path ? `https://image.tmdb.org/t/p/w200/${actor.profile_path}` : 'https://via.placeholder.com/200';
+
+    const flipCardBack = document.createElement('div');
+    flipCardBack.classList.add('flip-card-back');
+
+    const actorName = document.createElement('h1');
+    actorName.innerHTML = actor.name;
+    actorName.classList.add('actor-name');
+
+    //add actor name too back of card
+    flipCardBack.appendChild(actorName);
+
+
+    flipCardFront.appendChild(imageCard);
+    //add front and back to inner card
+
+    flipCardInner.appendChild(flipCardFront);
+    flipCardInner.appendChild(flipCardBack);
+
+    //add flipcardinner to flipcard
+    flipCard.appendChild(flipCardInner);
+
+    //adding flipcard to card-container
+    searchContainer.appendChild(flipCard);
+
   });
 }
 
