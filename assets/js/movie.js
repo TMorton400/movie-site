@@ -57,8 +57,19 @@ const displayMovies = (movies) => {
     movieName.innerHTML = movie.title;
     movieName.classList.add('movie-name');
 
+    const movieDescription = document.createElement('p');
+    movieDescription.innerHTML = movie.overview;
+    movieDescription.classList.add('movie-description');
+
+    const movieYear = document.createElement('p');
+    movieYear.innerHTML = `Release date: ${movie['release_date']}`;
+    movieYear.classList.add('movie-year');
+
+
     //add actor name too back of card
     flipCardBack.appendChild(movieName);
+    flipCardBack.appendChild(movieDescription);
+    flipCardBack.appendChild(movieYear);
 
 
     flipCardFront.appendChild(imageCard);

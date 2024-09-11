@@ -1,7 +1,6 @@
 :root{
     --textFamily: 'Montserrat';
     --fontSize: 20px;
-    --radius: 20px;
 }
 
 *{
@@ -68,18 +67,12 @@ a{
     justify-content: space-evenly;
 }
 
+
+
 .links{
     padding: 10px;
     border-radius: 10px;
 }
-
-.links:hover{
-    background-color: grey;
-    color: black;
-
-
-}
-
 
 .drop-nav-list{
     height: 100%;
@@ -104,10 +97,15 @@ a{
     border-radius: 10px;
 }
 
+
+.links:hover{
+    background-color: grey;
+    color: black;
+}
+
 .nav-logo {
     display: flex;
     align-items: center;
-
     margin-left: 28px;
     margin-top: 10px;
     height: 60px;
@@ -117,80 +115,109 @@ a{
 
 .nav-logo img {
     width: 80px;
-
+    margin-bottom: 10px;
     margin-right: 10px;
 
 }
 
 .nav-logo h2 {
     margin: 0;
-    font-size: 20px;
+    font-size: 24px;
 }
 
-.search-container{
-    height: 25%;
+.poster-container{
+    height: 80%;
     display: flex;
-    align-items: center;
-    justify-content:center;
-    flex-direction: column;
-}
-
-.search-container h2{
-    color: white;
-    margin-top: 47px;
-    margin-bottom: 47px;
-}
-
-.input-container{
-    background-color: white;
-    border-radius: 8px;
-}
-
-input[type="search"]::-webkit-search-cancel-button {
-    -webkit-appearance: none;
-    appearance: none;
-}
-
-
-.actor-search,
-.movie-search{
-    text-align: center;
-    height: 40px;
-    width: 240px;
-    border-radius: 8px;
-    border: none;
-    outline: none;
-}
-
-
-i{
-    margin-right: 20px;
-}
-
-.card-container{
-    height: 60%;
-    display: flex;
-    gap: 80px;
-    align-items: center;
     justify-content: space-evenly;
-
+    align-items: center;
 }
 
-.movie-card{
-    height: 227px;
-    width: 166px;
-    border: 1px solid black;
+.actor{
+    border-radius: 20px;
+    height: 400px;
+    width: 350px;
+    background-image: url('/assets/images/20160513_074630_leonardo_dicaprio_24734_13519.webp');
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
 }
 
-.movie-image{
-    height: 227px;
-    width: 166px;
+.movie{
+    border-radius: 20px;
+    height: 400px;
+    width: 350px;
+    background-image: url('/assets/images/Dark_knight_rises_poster.jpg');
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.actor-image{
-    height: 227px;
-    width: 166px;
+.actor .actor-button,
+.movie .movie-button {
+    display: none;
+    text-align: center;
+    padding: 5px;
 }
+
+.actor:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.actor:hover .actor-button{
+    display: inline;
+}
+
+.movie:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.movie:hover .movie-button{
+    display: inline;
+}
+
+.category:hover {
+    transform: scale(1.2);
+    background-color: rgba(0, 0, 0, 0.5);
+    background-blend-mode: darken; 
+}
+
+.category:hover .category-button{
+    display: inline;
+}
+
+.actor-search-link,
+.movie-search-link
+{
+    text-decoration: none;
+}
+
+
+
+
+
+
+
+
+@media (min-width: 952px) and (max-width: 1239px){
+    .actor, .movie, .category{
+        width: 250px;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 951px){
+    .actor, .movie, .category{
+        width: 200px;
+    }
+}
+
 
 .hamburger {
     display: none;
@@ -209,112 +236,8 @@ i{
     background-color: grey;
 }
 
-
-.card-container {
-    display: flex;
-    gap: 80px;
-    align-items: center;
-    justify-content: space-evenly;
-}
-/* Flip card styling */
-
-.flip-card{
-    height: 227px;
-    width: 166px;
-    perspective: 1000px;
-    min-height: 240px;
-}
-
-.flip-card-inner{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-    transition: transform 0.8s;
-    transform-style: preserve-3d;
-}
-
-.flip-card:hover .flip-card-inner {
-    transform: rotateY(180deg);
-}
-
-.flip-card-front, .flip-card-back{
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    backface-visibility: hidden;
-    border-radius: var(--radius);
-}
-
-
-.flip-card-front {
-    background-color: #bbb;
-    color: black;
-  }
-
-.flip-card-back {
-    border: 1px solid black;
-    color: white;
-    transform: rotateY(180deg);
-    font-family: 'Montserrat';
-}
-
-.flip-card-image {
-    height: 100%;
-    width: 100%;
-    border-radius: var(--radius);
-}
-
-.actor-name{
-    font-size: var(--fontSize);
-}
-
-.movie-name{
-    font-size: var(--fontSize);
-}
-
-@media (min-width: 952px) and (max-width: 1239px){
-    .movie-image{
-        height: 220px;
-        width: 150px;
-    }
-
-    .card-container{
-        gap: 60px;
-    }
-}
-
-
-@media (min-width: 769px) and (max-width: 951px){
-    .hamburger {
-        display: none;
-        flex-direction: column;
-        cursor: pointer;
-    }
-    
-    .hamburger span {
-        width: 25px;
-        height: 3px;
-        background-color: #fff;
-        margin: 4px 0;
-    }
-    
-    .hamburger:hover{
-        background-color: grey;
-    }
-
-    .card-container{
-        flex-wrap: wrap;
-        margin-top: 40px;
-    }
-
-
-    
-}
-
+/* Tablet View (768px and below) */
 @media screen and (max-width: 768px) {
-
-
     .nav-bar {
         height: 20%;
     }
@@ -336,17 +259,20 @@ i{
         padding: 20px;
     }
 
+    .actor, .movie, .category {
+        height: 300px;
+        width: 200px;
+        margin-top: 50px;
+        margin-left: 0;
+    }
+    
+
     .nav-logo{
         display: none;
     }
-
-    .card-container{
-        flex-direction: column;
-        margin-top: 30px;
-    }
 }
 
-
+/* Mobile View (480px and below) */
 @media screen and (max-width: 480px) {
     .nav-bar {
         height: 165px;
@@ -358,10 +284,6 @@ i{
     }
 
 
-    .nav-title{
-        width: 100%;
-    }
-    
     .nav-title h2{
         height: 80px;
         display: flex;
@@ -372,7 +294,6 @@ i{
 
     .hamburger { 
         display: flex;
-        align-items: center;
         margin-bottom: 15px;
     }
 
@@ -391,6 +312,24 @@ i{
         display: none;
     }
 
+    .poster-container {
+        padding-top: 30px;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .actor, .movie, .category {
+        height: 250px;
+        width: 50%;
+        margin: 20px auto;
+        align-items: center;
+    }
+
+    button {
+        width: 80%;
+        font-size: 14px;
+    }
+
     .nav-logo img {
         width: 80px;
         height: 90px;
@@ -398,4 +337,3 @@ i{
     }
 
 }
-
