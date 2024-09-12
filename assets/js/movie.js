@@ -38,6 +38,8 @@ const displayMovies = (movies) => {
     //Create flip card outer div
     const flipCard = document.createElement('div');
     flipCard.classList.add('flip-card');
+    flipCard.addEventListener('click',() => displayCard(movie.title, movie.poster_path, movie.overview, movie.release_date));
+
 
     //Create inner flip card
     const flipCardInner = document.createElement('div');
@@ -87,11 +89,7 @@ const displayMovies = (movies) => {
 }
 
 
-
-
-
 //Takes user input and displays it to the movie poster
-
 async function movieSearch(inputValue) {
   try {
     const response = await fetch(`https://api.themoviedb.org/3/search/movie?query=${inputValue}&include_adult=false&language=en-US&page=1`, movieOptions);
@@ -115,5 +113,40 @@ const findMovie = () => {
   }
 }
 
+
+const displayCard = (movieTitle, moviePoster, description, movieYear) => {
+  const card = document.getElementById('card-display');
+  const inputContainer = document.getElementById('inputContainer');
+  const name = document.getElementById('movieName');
+  const container = document.getElementById('searchContainer');
+  const body = document.body;
+
+  name.innerHTML = movieTitle;
+  console.log(movieTitle);
+
+  inputContainer.remove();
+  card.remove();
+
+ /*  const imageContainer = document.createElement('div'); */
+
+  const movieImage= document.createElement('img');
+  movieImage.src = `https://image.tmdb.org/t/p/w200/${moviePoster}`;
+  movieImage.classList.add('movie-image');
+
+  container.appendChild(movieImage);
+  container.style.height = 'auto';
+  container.style.flexDirection = 'column';
+
+  const movieDetails = document.createElement('p');
+  movieDetails.innerHTML = description;
+
+  const releaseDate = document.createElement('p');
+  releaseDate.innerHTML = movieYear;
+
+  container.appendChild(movieDetails);
+  container.appendChild(releaseDate);
+  container.appendChild(inputContainer);
+
+}
 
 popularMovie();

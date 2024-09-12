@@ -99,8 +99,8 @@ a{
 
 
 .links:hover{
-    background-color: grey;
-    color: black;
+    border-bottom: 3px solid white;
+
 }
 
 .nav-logo {

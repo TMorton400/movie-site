@@ -68,8 +68,7 @@ input[type="search"]::-webkit-search-cancel-button {
     appearance: none;
 }
 
-.actor-search,
-.movie-search{
+.actor-search{
     text-align: center;
     height: 40px;
     width: 240px;
