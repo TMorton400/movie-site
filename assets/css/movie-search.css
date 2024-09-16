@@ -155,6 +155,47 @@ i{
     font-size: 12px;
 }
 
+.movie-display{
+    height: 60%;
+    display: flex;
+    margin-top: 50px;
+}
+
+.left-container{
+    width: 70%;
+    height:100%;
+    margin-left: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.right-container{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 30px;
+}
+
+#movieName{
+    text-align: center;
+}
+
+.movie-details{
+    text-align: center;
+}
+
+.movie-release{
+    text-align: center;
+}
+
+.movie-image{
+    min-width: 50%;
+    height: 100%;
+}
+
 @media (min-width: 952px) and (max-width: 1239px){
     .movie-image{
         height: 220px;
@@ -226,6 +267,14 @@ i{
         flex-direction: column;
         margin-top: 30px;
     }
+
+    .movie-display{
+        height: 80%;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-evenly
+    }
+
 }
 
 

@@ -120,32 +120,57 @@ const displayCard = (movieTitle, moviePoster, description, movieYear) => {
   const name = document.getElementById('movieName');
   const container = document.getElementById('searchContainer');
   const body = document.body;
+  const nav = document.getElementById('navBar');
 
   name.innerHTML = movieTitle;
   console.log(movieTitle);
 
   inputContainer.remove();
   card.remove();
+  container.remove();
 
- /*  const imageContainer = document.createElement('div'); */
+  //create new container and insert it as a sibling next to the nav bar
+  const display = document.createElement('div');
+  display.classList.add('movie-display');
+  nav.insertAdjacentElement('afterend', display);
 
+
+  //Create left side container to insert details of movie into
+  const left = document.createElement('div');
+  left.classList.add('left-container');
+
+  //Create movie description 
+  const movieDetails = document.createElement('p');
+  movieDetails.classList.add('movie-details');
+  movieDetails.innerHTML = description;
+
+  //create release date 
+  const releaseDate = document.createElement('p');
+  releaseDate.classList.add('movie-release');
+  releaseDate.innerHTML = `Release date: ${movieYear}`;
+
+
+  //Append left container into movie display
+  display.appendChild(left);
+
+  //Append movie title into left container
+  left.appendChild(name);
+  left.appendChild(movieDetails);
+  left.appendChild(releaseDate);
+
+
+  const right = document.createElement('div');
+  right.classList.add('right-container');
+
+  //create movie image
   const movieImage= document.createElement('img');
   movieImage.src = `https://image.tmdb.org/t/p/w200/${moviePoster}`;
   movieImage.classList.add('movie-image');
 
-  container.appendChild(movieImage);
-  container.style.height = 'auto';
-  container.style.flexDirection = 'column';
+  display.appendChild(right);
+  right.appendChild(movieImage);
 
-  const movieDetails = document.createElement('p');
-  movieDetails.innerHTML = description;
-
-  const releaseDate = document.createElement('p');
-  releaseDate.innerHTML = movieYear;
-
-  container.appendChild(movieDetails);
-  container.appendChild(releaseDate);
-  container.appendChild(inputContainer);
+  
 
 }
 
